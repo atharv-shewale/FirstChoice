@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirstChoice Digital | Web Development Agency for Maharashtra</title>
+  <meta name="description" content="Premium, high-converting websites for businesses, shops, restaurants and startups across Kolhapur, Pune, and Mumbai.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#05070d',
+              dark: '#080d1a',
+              navy: '#0c1527',
+              slate: '#162238',
+              electric: '#00d2ff',
+              blue: '#2563eb',
+              sky: '#38bdf8',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          animation: {
+            'glow-pulse': 'glowPulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float-slow': 'float 6s ease-in-out infinite',
+            'float-fast': 'float 4s ease-in-out infinite',
+          },
+          keyframes: {
+            glowPulse: {
+              '0%, 100%': { opacity: '0.4', filter: 'blur(30px)' },
+              '50%': { opacity: '0.8', filter: 'blur(45px)' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Glow utilities & custom 3D perspective */
+    .electric-glow {
+      box-shadow: 0 0 25px -3px rgba(0, 210, 255, 0.45), 0 0 10px -2px rgba(37, 99, 235, 0.5);
+    }
+    .electric-glow-hover:hover {
+      box-shadow: 0 0 35px 2px rgba(0, 210, 255, 0.6), 0 0 15px -1px rgba(56, 189, 248, 0.6);
+    }
+    .text-glow {
+      text-shadow: 0 0 20px rgba(0, 210, 255, 0.35);
+    }
+    .glass-card {
+      background: linear-gradient(135deg, rgba(22, 34, 56, 0.7) 0%, rgba(12, 21, 39, 0.85) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+    }
+    .glass-card:hover {
+      border-color: rgba(0, 210, 255, 0.45);
+      background: linear-gradient(135deg, rgba(27, 43, 71, 0.8) 0%, rgba(14, 25, 48, 0.9) 100%);
+    }
+    .perspective-container {
+      perspective: 1200px;
+    }
+    .device-3d-tilt {
+      transform: rotateY(-10deg) rotateX(6deg) rotateZ(-1deg);
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .device-3d-tilt:hover {
+      transform: rotateY(-4deg) rotateX(2deg) rotateZ(0deg);
+    }
+    .phone-tilt {
+      transform: rotateY(-8deg) rotateX(4deg) translateY(20px);
+    }
+    .grid-bg {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#05070d] text-slate-100 font-sans selection:bg-cyan-500 selection:text-black overflow-x-hidden min-h-screen relative">
+
+  <!-- Background Ambient Glow Orbs -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="absolute -top-40 left-1/4 w-[600px] h-[600px] bg-cyan-500/15 rounded-full filter blur-[120px] animate-glow-pulse"></div>
+    <div class="absolute top-[35%] -right-40 w-[550px] h-[550px] bg-blue-600/15 rounded-full filter blur-[140px]"></div>
+    <div class="absolute bottom-10 left-10 w-[500px] h-[500px] bg-sky-500/10 rounded-full filter blur-[130px]"></div>
+    <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#05070d]/80 border-b border-slate-800/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-[1.5px] shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-400/40 transition-all">
+          <div class="w-full h-full bg-[#080d1a] rounded-[10px] flex items-center justify-center">
+            <span class="font-display font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-lg">1C</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-extrabold text-xl tracking-tight text-white group-hover:text-cyan-300 transition-colors">
+            FirstChoice <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Digital</span>
+          </span>
+          <span class="text-[10px] tracking-wider uppercase text-slate-400 font-medium -mt-0.5">Maharashtra Web Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-cyan-400 transition-colors">Services</a>
+        <a href="#trust" class="hover:text-cyan-400 transition-colors">Trusted By</a>
+        <a href="#results" class="hover:text-cyan-400 transition-colors">Why 24/7 Web</a>
+        <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Header CTA -->
+      <div class="flex items-center gap-3">
+        <button onclick="openImageModal()" class="hidden lg:inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-300 bg-cyan-950/40 border border-cyan-500/30 px-3.5 py-1.5 rounded-full hover:bg-cyan-900/40 transition">
+          <i data-lucide="eye" class="w-3.5 h-3.5 text-cyan-400"></i>
+          View 8K Render
+        </button>
+        <a href="https://wa.me/919800000000?text=Hi%20FirstChoice%20Digital%2C%20I%20want%20a%20free%20quote%20for%20my%20business%20website" target="_blank" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-3 py-1.5 rounded-full hover:bg-emerald-900/40 transition">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Quick WhatsApp
+        </a>
+        <button onclick="openQuoteModal()" class="relative group overflow-hidden px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 electric-glow hover:scale-105 active:scale-95">
+          <span class="relative z-10 flex items-center gap-2">
+            Get a Free Quote
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-12 pb-24 md:pt-20 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Left Column: Copy & CTAs -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left z-10">
+          
+          <!-- Regional Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-cyan-500/30 text-cyan-400 text-xs font-semibold mb-6 shadow-sm">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+            </span>
+            Maharashtra's Premier Web Growth Agency
+          </div>
+
+          <!-- Bold Headline -->
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white leading-[1.1] mb-6">
+            Your Business Deserves a Website That Works <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-500 text-glow">24/7.</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed mb-8 max-w-2xl">
+            Take your <span class="text-white font-semibold underline decoration-cyan-400/60 decoration-2 underline-offset-4">Kolhapur</span>, <span class="text-white font-semibold underline decoration-cyan-400/60 decoration-2 underline-offset-4">Pune</span> & <span class="text-white font-semibold underline decoration-cyan-400/60 decoration-2 underline-offset-4">Mumbai</span> business online and reach more customers around the clock.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+            <!-- Glowing "Let's Build It" Button -->
+            <button onclick="openQuoteModal()" class="px-7 py-3.5 rounded-xl text-base font-bold text-white bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 bg-[length:200%_auto] hover:bg-right transition-all duration-500 electric-glow electric-glow-hover flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 active:translate-y-0">
+              <span>Let's Build It</span>
+              <i data-lucide="sparkles" class="w-5 h-5 text-cyan-200 animate-spin-slow"></i>
+            </button>
+
+            <!-- Secondary Consultation Action -->
+            <a href="https://wa.me/919800000000?text=Hello%20FirstChoice%20Digital%2C%20I%20would%20like%20a%20free%20website%20consultation%20for%20my%20business." target="_blank" class="px-5 py-3.5 rounded-xl text-sm font-semibold text-slate-200 bg-slate-900/80 hover:bg-slate-800/90 border border-slate-700/80 hover:border-cyan-500/40 flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              WhatsApp Chat
+            </a>
+
+            <!-- 8K Mockup Viewer Button -->
+            <button onclick="openImageModal()" class="px-5 py-3.5 rounded-xl text-sm font-semibold text-cyan-300 bg-cyan-950/40 hover:bg-cyan-900/40 border border-cyan-500/30 flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="image" class="w-4 h-4 text-cyan-400"></i>
+              <span>8K UI Mockup</span>
+            </button>
+          </div>
+
+          <!-- Feature Bullets / Micro Trust -->
+          <div class="mt-10 pt-8 border-t border-slate-800/80 w-full grid grid-cols-3 gap-4 text-left">
+            <div>
+              <div class="text-2xl font-bold font-display text-white">3-5 Days</div>
+              <div class="text-xs text-slate-400">Fast Local Delivery</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold font-display text-cyan-400">100% Mobile</div>
+              <div class="text-xs text-slate-400">Optimized for Speed</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold font-display text-white">0% Hassle</div>
+              <div class="text-xs text-slate-400">Hosting & Domain Setup</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Right Column: 3D Mockup of Desktop & Smartphone -->
+        <div class="lg:col-span-5 relative perspective-container">
+          
+          <!-- Ambient Glow behind Mockup -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-cyan-500/20 via-blue-600/30 to-purple-600/20 rounded-3xl filter blur-2xl opacity-75"></div>
+
+          <!-- 3D Desktop Device Container -->
+          <div class="relative device-3d-tilt bg-[#0c1220] rounded-2xl p-2.5 sm:p-3 border border-cyan-500/30 shadow-2xl shadow-cyan-950/50">
+            
+            <!-- Browser Top Bar -->
+            <div class="flex items-center justify-between pb-2.5 mb-2 px-2 border-b border-slate-800 text-[11px] text-slate-400">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <div class="bg-slate-900/90 px-4 py-0.5 rounded-md text-[10px] border border-slate-700/60 text-slate-300 flex items-center gap-1">
+                <i data-lucide="lock" class="w-2.5 h-2.5 text-emerald-400"></i>
+                <span>maharashtraretail.firstchoice.in</span>
+              </div>
+              <div class="flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+                <span class="text-[9px] text-cyan-400 font-mono">LIVE 24/7</span>
+              </div>
+            </div>
+
+            <!-- Desktop Screen Content: Modern Retail & Cafe Website -->
+            <div class="bg-[#090f1d] rounded-lg overflow-hidden border border-slate-800/80 p-4">
+              
+              <!-- Mini Store Header -->
+              <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                <div class="flex items-center gap-2">
+                  <div class="w-6 h-6 rounded-md bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center text-[10px] font-bold text-black">
+                    SR
+                  </div>
+                  <span class="text-xs font-bold tracking-tight text-white">Shree Rajlaxmi Lifestyle</span>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] text-slate-300">
+                  <span class="bg-cyan-950/60 text-cyan-300 px-2 py-0.5 rounded border border-cyan-800/50">Kolhapur • Pune</span>
+                  <div class="relative">
+                    <i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-slate-300"></i>
+                    <span class="absolute -top-1 -right-1 bg-cyan-400 text-black font-extrabold text-[8px] w-3 h-3 rounded-full flex items-center justify-center">3</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mini Hero Banner -->
+              <div class="mt-3 relative rounded-lg overflow-hidden bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 p-3.5 border border-slate-800">
+                <span class="text-[9px] uppercase tracking-wider text-cyan-400 font-bold">New Festive Collection 2026</span>
+                <h4 class="text-sm font-bold text-white mt-0.5">Authentic Paithani & Kolhapuri Craft</h4>
+                <div class="mt-2 flex items-center gap-2">
+                  <span class="text-xs font-extrabold text-cyan-300">₹2,499</span>
+                  <span class="text-[10px] text-slate-500 line-through">₹3,999</span>
+                  <span class="text-[9px] bg-emerald-950/80 text-emerald-400 px-1.5 py-0.2 rounded border border-emerald-800/50">Instant UPI Order</span>
+                </div>
+              </div>
+
+              <!-- Mini Product Grid -->
+              <div class="grid grid-cols-2 gap-2 mt-3">
+                <div class="bg-slate-900/60 p-2 rounded border border-slate-800 flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center text-cyan-400">
+                    <i data-lucide="tag" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <div class="text-[10px] font-medium text-white">Kolhapuri Chappal</div>
+                    <div class="text-[9px] text-emerald-400 font-bold">14 orders today</div>
+                  </div>
+                </div>
+                <div class="bg-slate-900/60 p-2 rounded border border-slate-800 flex items-center gap-2">
+                  <div class="w-8 h-8 rounded bg-slate-800 flex items-center justify-center text-blue-400">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <div class="text-[10px] font-medium text-white">Pune Store Visit</div>
+                    <div class="text-[9px] text-cyan-400 font-bold">+184 directions</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Floating Performance Analytics Card -->
+            <div class="absolute -bottom-6 -left-6 bg-slate-900/95 border border-cyan-500/40 p-3 rounded-xl shadow-xl shadow-black/80 flex items-center gap-3 backdrop-blur-lg animate-float-slow">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                <i data-lucide="trending-up" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-[11px] text-slate-400">Monthly Store Revenue</div>
+                <div class="text-base font-extrabold text-white">₹14,80,000+</div>
+                <div class="text-[9px] text-emerald-400 font-medium">↑ +320% from Online Orders</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 3D Floating Smartphone Mockup Overlay -->
+          <div class="absolute -right-4 sm:-right-8 -bottom-10 w-44 sm:w-52 bg-[#080d1a] p-2 rounded-[28px] border-2 border-cyan-400/50 shadow-2xl phone-tilt animate-float-fast">
+            <!-- Phone Notch / Island -->
+            <div class="w-16 h-3 bg-slate-900 rounded-full mx-auto mb-2 flex items-center justify-center">
+              <div class="w-2 h-2 rounded-full bg-cyan-400/80"></div>
+            </div>
+            
+            <!-- Phone Screen Content -->
+            <div class="bg-[#0b1324] rounded-[20px] p-2.5 text-[10px] border border-slate-800">
+              <div class="flex justify-between items-center mb-2">
+                <span class="font-bold text-white text-[11px]">Daily Inquiries</span>
+                <span class="text-[9px] text-emerald-400 font-bold">WhatsApp Direct</span>
+              </div>
+              <div class="space-y-1.5">
+                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800 text-[9px] flex items-center gap-1.5">
+                  <i data-lucide="message-square" class="w-3 h-3 text-emerald-400 flex-shrink-0"></i>
+                  <span class="truncate text-slate-200">Customer from Baner, Pune: "Need bulk quotation"</span>
+                </div>
+                <div class="bg-slate-900/80 p-1.5 rounded border border-slate-800 text-[9px] flex items-center gap-1.5">
+                  <i data-lucide="check-circle" class="w-3 h-3 text-cyan-400 flex-shrink-0"></i>
+                  <span class="truncate text-slate-200">New Order: Kolhapur Store (Paid UPI)</span>
+                </div>
+              </div>
+              <div class="mt-2.5 pt-2 border-t border-slate-800/80 flex items-center justify-between text-[9px]">
+                <span class="text-slate-400">Response Speed</span>
+                <span class="text-cyan-400 font-bold">< 2 mins</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL SUCCESS STORIES SECTION -->
+  <section class="py-20 relative border-t border-slate-800/80 bg-[#050811]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs uppercase font-extrabold tracking-wider text-cyan-400 bg-cyan-950/80 px-3.5 py-1 rounded-full border border-cyan-800/50">
+          Proven Impact in Maharashtra
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3">
+          Real Results for Real Local Businesses
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          See how local shopkeepers and entrepreneurs transformed footfall and orders with a 24/7 web presence.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Story 1: Kolhapur -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-300 font-semibold border border-cyan-800/50">Kolhapur</span>
+            <div class="flex text-amber-400">★★★★★</div>
+          </div>
+          <h3 class="font-bold text-lg text-white mb-2">Heritage Leather & Craft</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            "Before FirstChoice Digital, we relied 100% on walk-in tourists at Mahalakshmi temple area. Our custom e-commerce catalog now ships 40+ handcrafted pairs daily across India with UPI prepayments."
+          </p>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Rajendra Patil, Owner</span>
+            <span class="text-emerald-400 font-bold">+280% Sales Growth</span>
+          </div>
+        </div>
+
+        <!-- Story 2: Pune -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-blue-950 text-blue-300 font-semibold border border-blue-800/50">Pune (FC Road & Baner)</span>
+            <div class="flex text-amber-400">★★★★★</div>
+          </div>
+          <h3 class="font-bold text-lg text-white mb-2">Artisan Roasters & Bakery</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            "Our sleek Google-optimized website doubled our weekend table bookings and lets corporate clients order bulk gift hampers directly via WhatsApp within 20 seconds."
+          </p>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Tanvi Kulkarni, Co-Founder</span>
+            <span class="text-emerald-400 font-bold">120+ Weekly Leads</span>
+          </div>
+        </div>
+
+        <!-- Story 3: Mumbai -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 font-semibold border border-purple-800/50">Mumbai (Bandra)</span>
+            <div class="flex text-amber-400">★★★★★</div>
+          </div>
+          <h3 class="font-bold text-lg text-white mb-2">Modern D2C Ethnic Studio</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            "The lightning-fast landing page built for our Instagram ads cut our customer acquisition cost by half. 99% mobile score and zero checkout drop-offs."
+          </p>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Aarav Mehta, Founder</span>
+            <span class="text-emerald-400 font-bold">4.2x Ad ROAS</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQS SECTION -->
+  <section class="py-20 bg-[#080d1a]/50 border-t border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2">
+          Clear, honest answers for busy business owners in Maharashtra.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>Do I need any technical knowledge to manage my website?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            None at all! We handle the domain, cloud hosting, SSL certificates, speed optimization, and backups. We also provide you a straightforward mobile dashboard or handle product updates for you via simple WhatsApp messages.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>How does UPI payment integration work for my shop?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            We integrate trusted payment gateways like Razorpay, Cashfree, or direct dynamic UPI QR codes. Payments land directly in your Indian bank account with 0% extra commissions taken by our agency.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>Will my business appear on Google Maps and search in Kolhapur / Pune / Mumbai?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            Yes! Every Business Website package includes comprehensive Local SEO setup: structured schema markup, Google Search Console indexing, and Google Business Profile optimization so local customers searching "near me" discover your store.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>How fast can FirstChoice Digital deliver my website?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            High-converting Landing Pages are typically ready in 3 to 5 business days. Full Business Websites take 5 to 7 days, and complete E-commerce Stores are launched in 10 to 14 days, including payment and product testing.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON (Persistent Bottom-Right) -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2 group">
+    <div class="hidden sm:block bg-slate-950/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-emerald-500/40 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      Chat with an expert on WhatsApp
+    </div>
+    <a href="https://wa.me/919800000000?text=Hello%20FirstChoice%20Digital%2C%20I%20want%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" aria-label="WhatsApp Contact" class="relative w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-lg shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-all">
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-200"></span>
+      </span>
+      <i data-lucide="message-circle" class="w-7 h-7 text-black"></i>
+    </a>
+  </div>
+
+  <!-- 8K MOCKUP LIGHTBOX MODAL -->
+  <div id="imageModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity">
+    <div class="relative w-full max-w-5xl bg-[#090f1e] border border-cyan-500/40 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-slate-800">
+        <div class="flex items-center gap-2 text-cyan-400 text-xs font-bold">
+          <i data-lucide="image" class="w-4 h-4"></i>
+          <span>FirstChoice Digital — 8K Photorealistic UI/UX Mockup</span>
+        </div>
+        <button onclick="closeImageModal()" class="text-slate-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-2 sm:p-4 max-h-[80vh] overflow-auto flex items-center justify-center bg-black/40">
+        <img src="firstchoice_digital_mockup.jpg" alt="FirstChoice Digital 8K UI Mockup" class="w-full h-auto rounded-lg shadow-2xl border border-slate-800">
+      </div>
+      <div class="p-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+        <span>Desktop & Smartphone 3D Viewport • Electric Blue Cyberpunk Aesthetic</span>
+        <button onclick="openQuoteModal(); closeImageModal();" class="text-cyan-400 hover:underline font-bold">
+          Order This Design →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCAL TRUST SECTION (Maharashtra Businesses) -->
+  <section id="trust" class="relative py-16 bg-[#080d1a]/80 border-y border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Trust Header Banner -->
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase font-extrabold tracking-widest text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-4 py-1 rounded-full">
+          Trusted by Local Businesses Across Maharashtra
+        </span>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-white mt-3">
+          Empowering Shops, Showrooms, Restaurants & Startups
+        </h2>
+        <p class="text-slate-400 text-sm max-w-xl mx-auto mt-2">
+          From historic Rankala in Kolhapur to tech hubs in Hinjawadi Pune and high-growth markets in Mumbai.
+        </p>
+      </div>
+
+      <!-- City & Hub Badges Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
+        
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl text-center transition group">
+          <div class="text-cyan-400 font-bold text-sm group-hover:scale-105 transition-transform">Kolhapur</div>
+          <div class="text-[11px] text-slate-400 mt-1">Laxmi Rd & MIDC</div>
+          <div class="text-[10px] text-emerald-400 mt-1.5 font-medium">35+ Stores Online</div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl text-center transition group">
+          <div class="text-cyan-400 font-bold text-sm group-hover:scale-105 transition-transform">Pune West</div>
+          <div class="text-[11px] text-slate-400 mt-1">Baner & Balewadi</div>
+          <div class="text-[10px] text-emerald-400 mt-1.5 font-medium">50+ Cafes & D2C</div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl text-center transition group">
+          <div class="text-cyan-400 font-bold text-sm group-hover:scale-105 transition-transform">Pune Tech</div>
+          <div class="text-[11px] text-slate-400 mt-1">Hinjawadi & Magarpatta</div>
+          <div class="text-[10px] text-emerald-400 mt-1.5 font-medium">B2B & IT Services</div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl text-center transition group">
+          <div class="text-cyan-400 font-bold text-sm group-hover:scale-105 transition-transform">Mumbai</div>
+          <div class="text-[11px] text-slate-400 mt-1">Andheri & Bandra</div>
+          <div class="text-[10px] text-emerald-400 mt-1.5 font-medium">Retail & Boutiques</div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl text-center transition group">
+          <div class="text-cyan-400 font-bold text-sm group-hover:scale-105 transition-transform">Navi Mumbai</div>
+          <div class="text-[11px] text-slate-400 mt-1">Vashi & Belapur</div>
+          <div class="text-[10px] text-emerald-400 mt-1.5 font-medium">Logistics & Trade</div>
+        </div>
+
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl text-center transition group">
+          <div class="text-cyan-400 font-bold text-sm group-hover:scale-105 transition-transform">Sangli & Satara</div>
+          <div class="text-[11px] text-slate-400 mt-1">Industrial Belts</div>
+          <div class="text-[10px] text-emerald-400 mt-1.5 font-medium">Agro & Manufacturing</div>
+        </div>
+
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="mt-8 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-around gap-6 text-center">
+        <div class="flex items-center gap-3">
+          <i data-lucide="shield-check" class="w-6 h-6 text-cyan-400"></i>
+          <div class="text-left">
+            <div class="text-sm font-bold text-white">99.9% Reliable Uptime</div>
+            <div class="text-xs text-slate-400">Enterprise cloud hosting included</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i data-lucide="zap" class="w-6 h-6 text-amber-400"></i>
+          <div class="text-left">
+            <div class="text-sm font-bold text-white">Sub-Second Load Speed</div>
+            <div class="text-xs text-slate-400">Optimized for 4G/5G phones</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <i data-lucide="smartphone" class="w-6 h-6 text-emerald-400"></i>
+          <div class="text-left">
+            <div class="text-sm font-bold text-white">Direct WhatsApp Sync</div>
+            <div class="text-xs text-slate-400">Customer leads land in your phone</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION: 3-Column Clean Grid Layout -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/60 border border-blue-500/30 text-cyan-400 text-xs font-bold mb-3">
+          Engineered for Sales & Leads
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
+          High-Converting Web Solutions
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg mt-4">
+          Everything your local shop, clinic, restaurant or startup needs to win customers against competitors.
+        </p>
+      </div>
+
+      <!-- 3-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Service Card 1: E-commerce Stores -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2">
+          
+          <div class="relative z-10">
+            <!-- Sleek Icon -->
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-blue-600/30 border border-cyan-400/40 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-500/30 transition-all">
+              <i data-lucide="shopping-cart" class="w-7 h-7"></i>
+            </div>
+
+            <!-- Service Title -->
+            <h3 class="font-display font-bold text-2xl text-white mb-3 group-hover:text-cyan-300 transition-colors">
+              E-commerce Stores
+            </h3>
+
+            <!-- Description -->
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Turn your retail shop into an automated selling machine. Accept payments via UPI, Google Pay, PhonePe, and Credit Cards with instant WhatsApp order updates.
+            </p>
+
+            <!-- Feature Checklist -->
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8 border-t border-slate-800/80 pt-6">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Razorpay, Paytm & UPI 1-click checkout</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Automated WhatsApp order confirmation</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Inventory & catalog management on mobile</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Zero commission per sale</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card Action -->
+          <button onclick="selectService('E-commerce Stores')" class="w-full py-3 rounded-xl bg-slate-900 border border-cyan-500/30 text-cyan-300 font-semibold text-xs hover:bg-cyan-500 hover:text-black transition-all flex items-center justify-center gap-2">
+            <span>Explore E-commerce Plan</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Service Card 2: Business Websites (Featured) -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2 border-cyan-400/50 shadow-xl shadow-cyan-950/40">
+          
+          <!-- Popular Tag -->
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-cyan-400 to-blue-500 text-black text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
+            Most Popular for Local Business
+          </div>
+
+          <div class="relative z-10">
+            <!-- Sleek Icon -->
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-blue-600/30 to-cyan-400/30 border border-cyan-400/60 flex items-center justify-center text-cyan-300 mb-6 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-cyan-400/40 transition-all">
+              <i data-lucide="briefcase" class="w-7 h-7"></i>
+            </div>
+
+            <!-- Service Title -->
+            <h3 class="font-display font-bold text-2xl text-white mb-3 group-hover:text-cyan-300 transition-colors">
+              Business Websites
+            </h3>
+
+            <!-- Description -->
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Establish unbreakable authority in your city. Perfect for showrooms, medical practices, law firms, manufacturers, and professional consultants seeking premium clients.
+            </p>
+
+            <!-- Feature Checklist -->
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8 border-t border-slate-800/80 pt-6">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Google Business Profile & Maps optimization</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>High-trust customer testimonials & portfolio</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Direct "Call Now" & "Get Directions" buttons</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Free custom domain & business email (.com/.in)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card Action -->
+          <button onclick="selectService('Business Websites')" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs electric-glow hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+            <span>Get Free Business Website Quote</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <!-- Service Card 3: Landing Pages -->
+        <div class="glass-card rounded-2xl p-8 relative flex flex-col justify-between group transition-all duration-300 hover:-translate-y-2">
+          
+          <div class="relative z-10">
+            <!-- Sleek Icon -->
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-sky-500/20 to-indigo-600/30 border border-sky-400/40 flex items-center justify-center text-sky-400 mb-6 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-sky-500/30 transition-all">
+              <i data-lucide="target" class="w-7 h-7"></i>
+            </div>
+
+            <!-- Service Title -->
+            <h3 class="font-display font-bold text-2xl text-white mb-3 group-hover:text-cyan-300 transition-colors">
+              Landing Pages
+            </h3>
+
+            <!-- Description -->
+            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+              Lightning-fast, single-page conversion funnels engineered specifically for Google Ads, Facebook & Instagram marketing campaigns to generate high-intent inquiries.
+            </p>
+
+            <!-- Feature Checklist -->
+            <ul class="space-y-2.5 text-xs text-slate-300 mb-8 border-t border-slate-800/80 pt-6">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Sub-second loading speed for higher ad ROI</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Instant lead sync to WhatsApp & Google Sheets</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>A/B tested copywriting & high-contrast CTAs</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-cyan-400 flex-shrink-0"></i>
+                <span>Meta Pixel & Google Analytics 4 installed</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card Action -->
+          <button onclick="selectService('Landing Pages')" class="w-full py-3 rounded-xl bg-slate-900 border border-cyan-500/30 text-cyan-300 font-semibold text-xs hover:bg-cyan-500 hover:text-black transition-all flex items-center justify-center gap-2">
+            <span>Explore Landing Page Funnels</span>
+            <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY 24/7 SECTION: Comparison for Maharashtra Store Owners -->
+  <section id="results" class="py-20 bg-gradient-to-b from-[#05070d] via-[#091122] to-[#05070d] border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 border border-cyan-500/20 relative overflow-hidden">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7">
+            <span class="text-xs uppercase font-extrabold tracking-wider text-cyan-400 bg-cyan-950/80 px-3 py-1 rounded-full border border-cyan-800/60">
+              The FirstChoice Advantage
+            </span>
+            <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-4 leading-tight">
+              While Your Physical Shop Closes at 9:00 PM, Your Website Sells Non-Stop.
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base mt-4 leading-relaxed">
+              Customers in Pune, Kolhapur and Mumbai browse Instagram and Google late at night. Without a fast, modern website, they buy from competitors or big national aggregators. With FirstChoice Digital, your digital storefront captures every single buyer.
+            </p>
+            
+            <div class="mt-6 flex flex-wrap gap-4 text-xs font-semibold text-slate-200">
+              <span class="flex items-center gap-2 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> No Monthly Hidden Fees
+              </span>
+              <span class="flex items-center gap-2 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> Local Language (Marathi / English) Support
+              </span>
+              <span class="flex items-center gap-2 bg-slate-900/90 px-3 py-1.5 rounded-lg border border-slate-800">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400"></i> 100% Ownership of Code & Domain
+              </span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 bg-[#070b16] rounded-2xl p-6 border border-cyan-500/30 text-center">
+            <div class="w-12 h-12 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center mx-auto mb-3">
+              <i data-lucide="phone-call" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Have Questions? Talk to an Expert</h3>
+            <p class="text-xs text-slate-400 mt-1 mb-5">Get a customized strategy call for your business. No pressure, friendly advice.</p>
+            <a href="https://wa.me/919800000000?text=Hello%20FirstChoice%20Digital%2C%20I%20want%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" class="w-full py-3.5 px-6 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-500/20">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Direct WhatsApp: +91 98000 00000</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCAL SUCCESS STORIES SECTION -->
+  <section class="py-20 relative border-t border-slate-800/80 bg-[#050811]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs uppercase font-extrabold tracking-wider text-cyan-400 bg-cyan-950/80 px-3.5 py-1 rounded-full border border-cyan-800/50">
+          Proven Impact in Maharashtra
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-3">
+          Real Results for Real Local Businesses
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          See how local shopkeepers and entrepreneurs transformed footfall and orders with a 24/7 web presence.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Story 1: Kolhapur -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-cyan-950 text-cyan-300 font-semibold border border-cyan-800/50">Kolhapur</span>
+            <div class="flex text-amber-400">★★★★★</div>
+          </div>
+          <h3 class="font-bold text-lg text-white mb-2">Heritage Leather & Craft</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            "Before FirstChoice Digital, we relied 100% on walk-in tourists at Mahalakshmi temple area. Our custom e-commerce catalog now ships 40+ handcrafted pairs daily across India with UPI prepayments."
+          </p>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Rajendra Patil, Owner</span>
+            <span class="text-emerald-400 font-bold">+280% Sales Growth</span>
+          </div>
+        </div>
+
+        <!-- Story 2: Pune -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-blue-950 text-blue-300 font-semibold border border-blue-800/50">Pune (FC Road & Baner)</span>
+            <div class="flex text-amber-400">★★★★★</div>
+          </div>
+          <h3 class="font-bold text-lg text-white mb-2">Artisan Roasters & Bakery</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            "Our sleek Google-optimized website doubled our weekend table bookings and lets corporate clients order bulk gift hampers directly via WhatsApp within 20 seconds."
+          </p>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Tanvi Kulkarni, Co-Founder</span>
+            <span class="text-emerald-400 font-bold">120+ Weekly Leads</span>
+          </div>
+        </div>
+
+        <!-- Story 3: Mumbai -->
+        <div class="glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/40 transition">
+          <div class="flex items-center justify-between text-xs mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-purple-950 text-purple-300 font-semibold border border-purple-800/50">Mumbai (Bandra)</span>
+            <div class="flex text-amber-400">★★★★★</div>
+          </div>
+          <h3 class="font-bold text-lg text-white mb-2">Modern D2C Ethnic Studio</h3>
+          <p class="text-xs text-slate-300 leading-relaxed mb-4">
+            "The lightning-fast landing page built for our Instagram ads cut our customer acquisition cost by half. 99% mobile score and zero checkout drop-offs."
+          </p>
+          <div class="pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+            <span class="text-slate-400 font-medium">Aarav Mehta, Founder</span>
+            <span class="text-emerald-400 font-bold">4.2x Ad ROAS</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQS SECTION -->
+  <section class="py-20 bg-[#080d1a]/50 border-t border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-2">
+          Clear, honest answers for busy business owners in Maharashtra.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>Do I need any technical knowledge to manage my website?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            None at all! We handle the domain, cloud hosting, SSL certificates, speed optimization, and backups. We also provide you a straightforward mobile dashboard or handle product updates for you via simple WhatsApp messages.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>How does UPI payment integration work for my shop?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            We integrate trusted payment gateways like Razorpay, Cashfree, or direct dynamic UPI QR codes. Payments land directly in your Indian bank account with 0% extra commissions taken by our agency.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>Will my business appear on Google Maps and search in Kolhapur / Pune / Mumbai?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            Yes! Every Business Website package includes comprehensive Local SEO setup: structured schema markup, Google Search Console indexing, and Google Business Profile optimization so local customers searching "near me" discover your store.
+          </p>
+        </details>
+
+        <details class="glass-card rounded-xl p-5 group cursor-pointer border border-slate-800">
+          <summary class="font-bold text-sm text-white flex justify-between items-center list-none">
+            <span>How fast can FirstChoice Digital deliver my website?</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 text-cyan-400 group-open:rotate-180 transition-transform"></i>
+          </summary>
+          <p class="text-xs text-slate-300 mt-3 leading-relaxed pt-3 border-t border-slate-800/80">
+            High-converting Landing Pages are typically ready in 3 to 5 business days. Full Business Websites take 5 to 7 days, and complete E-commerce Stores are launched in 10 to 14 days, including payment and product testing.
+          </p>
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON (Persistent Bottom-Right) -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2 group">
+    <div class="hidden sm:block bg-slate-950/90 text-white text-xs font-semibold px-3 py-1.5 rounded-full border border-emerald-500/40 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      Chat with an expert on WhatsApp
+    </div>
+    <a href="https://wa.me/919800000000?text=Hello%20FirstChoice%20Digital%2C%20I%20want%20to%20discuss%20a%20website%20for%20my%20business." target="_blank" aria-label="WhatsApp Contact" class="relative w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-lg shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-all">
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-200"></span>
+      </span>
+      <i data-lucide="message-circle" class="w-7 h-7 text-black"></i>
+    </a>
+  </div>
+
+  <!-- 8K MOCKUP LIGHTBOX MODAL -->
+  <div id="imageModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md transition-opacity">
+    <div class="relative w-full max-w-5xl bg-[#090f1e] border border-cyan-500/40 rounded-2xl overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-slate-800">
+        <div class="flex items-center gap-2 text-cyan-400 text-xs font-bold">
+          <i data-lucide="image" class="w-4 h-4"></i>
+          <span>FirstChoice Digital — 8K Photorealistic UI/UX Mockup</span>
+        </div>
+        <button onclick="closeImageModal()" class="text-slate-400 hover:text-white p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-2 sm:p-4 max-h-[80vh] overflow-auto flex items-center justify-center bg-black/40">
+        <img src="firstchoice_digital_mockup.jpg" alt="FirstChoice Digital 8K UI Mockup" class="w-full h-auto rounded-lg shadow-2xl border border-slate-800">
+      </div>
+      <div class="p-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+        <span>Desktop & Smartphone 3D Viewport • Electric Blue Cyberpunk Aesthetic</span>
+        <button onclick="openQuoteModal(); closeImageModal();" class="text-cyan-400 hover:underline font-bold">
+          Order This Design →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-[#04060a] border-t border-slate-800/80 pt-16 pb-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800/60">
+        
+        <!-- Brand Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 p-[1.5px]">
+              <div class="w-full h-full bg-[#080d1a] rounded-[6px] flex items-center justify-center text-xs font-bold text-cyan-400">
+                1C
+              </div>
+            </div>
+            <span class="font-display font-extrabold text-lg tracking-tight text-white">
+              FirstChoice <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Digital</span>
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 mt-3 max-w-sm leading-relaxed">
+            Premium, high-performance web development agency serving ambitious small businesses, retailers, and entrepreneurs across Maharashtra.
+          </p>
+          <div class="mt-4 flex items-center gap-2 text-xs text-slate-500">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Headquarters: Pune & Kolhapur, Maharashtra, India</span>
+          </div>
+        </div>
+
+        <!-- Social & Consultation Channels -->
+        <div>
+          <h4 class="text-xs font-bold tracking-wider uppercase text-white mb-4">Direct Channels</h4>
+          <ul class="space-y-3 text-xs">
+            <li>
+              <a href="https://wa.me/919800000000?text=Hi%20FirstChoice%20Digital%2C%20let%27s%20connect%20for%20a%20project" target="_blank" class="flex items-center gap-2.5 text-slate-300 hover:text-emerald-400 transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+                <span>WhatsApp: +91 98000 00000</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/firstchoice.digital" target="_blank" class="flex items-center gap-2.5 text-slate-300 hover:text-pink-400 transition-colors">
+                <i data-lucide="instagram" class="w-4 h-4 text-pink-400"></i>
+                <span>@firstchoice.digital</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/direct/t/firstchoice.digital" target="_blank" class="flex items-center gap-2.5 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>DM for Consultation</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Service Shortcuts -->
+        <div>
+          <h4 class="text-xs font-bold tracking-wider uppercase text-white mb-4">Core Services</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">E-commerce Stores</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">Business Websites</a></li>
+            <li><a href="#services" class="hover:text-cyan-400 transition-colors">High-Converting Landing Pages</a></li>
+            <li><a href="#trust" class="hover:text-cyan-400 transition-colors">Local SEO & Google Maps</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+        <div>
+          © 2026 FirstChoice Digital. Built for Maharashtra's boldest entrepreneurs.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+          <a href="#contact" class="text-cyan-400 hover:underline">Get a Free Quote</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE FREE QUOTE MODAL -->
+  <div id="quoteModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity">
+    <div class="relative w-full max-w-lg bg-[#0c1326] border border-cyan-500/40 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-cyan-950/80">
+      
+      <!-- Close Button -->
+      <button onclick="closeQuoteModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <div class="flex items-center gap-2 text-cyan-400 text-xs font-bold mb-2">
+        <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <span>FirstChoice Digital Free Quote</span>
+      </div>
+
+      <h3 class="font-display font-extrabold text-2xl text-white">Let's Build Your Website</h3>
+      <p class="text-xs text-slate-300 mt-1 mb-6">Tell us about your business in Maharashtra to get an instant quote and timeline.</p>
+
+      <form id="quoteForm" onsubmit="handleQuoteSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">Your Name / Business Name</label>
+          <input type="text" id="bizName" required placeholder="e.g. Yash Deshmukh (Deshmukh Sweets Pune)" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition">
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Your City</label>
+            <select id="bizCity" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-cyan-400 transition">
+              <option value="Kolhapur">Kolhapur</option>
+              <option value="Pune">Pune</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Navi Mumbai">Navi Mumbai</option>
+              <option value="Other Maharashtra">Other Maharashtra</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-slate-300 mb-1">Project Needed</label>
+            <select id="bizService" class="w-full px-3 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-cyan-400 transition">
+              <option value="E-commerce Store">E-commerce Store</option>
+              <option value="Business Website">Business Website</option>
+              <option value="Landing Page">Landing Page Funnel</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-medium text-slate-300 mb-1">WhatsApp Number</label>
+          <input type="tel" id="bizPhone" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-sm text-white focus:outline-none focus:border-cyan-400 transition">
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-500 text-white font-bold text-sm electric-glow hover:scale-[1.01] transition-all flex items-center justify-center gap-2">
+          <span>Get Instant Quote on WhatsApp</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+
+        <p class="text-[11px] text-center text-slate-400">
+          🔒 Zero spam guarantee. We connect directly with you within 30 minutes.
+        </p>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- Lucide Icon Renderer & Modal Script -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    function openQuoteModal() {
+      document.getElementById('quoteModal').classList.remove('hidden');
+    }
+
+    function closeQuoteModal() {
+      document.getElementById('quoteModal').classList.add('hidden');
+    }
+
+    function selectService(serviceName) {
+      const select = document.getElementById('bizService');
+      if (select) {
+        if (serviceName.includes('E-commerce')) select.value = 'E-commerce Store';
+        else if (serviceName.includes('Business')) select.value = 'Business Website';
+        else if (serviceName.includes('Landing')) select.value = 'Landing Page';
+      }
+      openQuoteModal();
+    }
+
+    function handleQuoteSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('bizName').value;
+      const city = document.getElementById('bizCity').value;
+      const service = document.getElementById('bizService').value;
+      const phone = document.getElementById('bizPhone').value;
+
+      const message = encodeURIComponent(
+        `Hi FirstChoice Digital! My name/business is ${name} from ${city}. I am interested in a ${service}. My contact number is ${phone}. Please send me a free quote and timeline.`
+      );
+      
+      const whatsappUrl = `https://wa.me/919800000000?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+      closeQuoteModal();
+    }
+  </script>
+</body>
+</html>
+
